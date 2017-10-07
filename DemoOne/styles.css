@@ -1,13 +1,19 @@
 <head>
 <style>
-
-
 </style>
 </head>
 <body>
 
-h1 {margin: auto}
-body { background-color: red; }
+body { background-color: #808080; 
+font-size: 20px;
+}
+
+h1 { background-color: #ADD8E6;
+font-size: 3em;
+}
+
+
+
 
 
 
