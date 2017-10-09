@@ -1,0 +1,49 @@
+.modal {
+	display:none;
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:auto;
+	background-color:grey;
+	
+}
+.modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	width: 80%;	
+}
+.close {
+	color:#aaa;
+	float:right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+body{
+	background-color: grey;	
+}
+.playerOne{
+	background-color: white;
+	display: block;
+	width: 150px;
+	margin: auto;
+}
+.playerTwo{
+	background-color: white;
+	display: block;
+	width: 150px;
+	margin: auto;
+}
+.button{
+	background-color: white;
+	display: block;
+	width: 45px;
+	margin: auto;
+}
+.input{
+	background-color:white;
+}
+
