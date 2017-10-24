@@ -70,6 +70,55 @@ function TaskAtHandApp()
 			$task.insertAfter($task.next());
 		});
 	}
+	function addTaskElement (taskName)
+	{
+		var $task = $("#task-template .task") .clone();
+		$("span.task-name", $task).text(taskName);
+		
+		$("#task-list").append($task);
+		
+		$("button.delete", $task).click(function(){
+			$task.remove();
+		});
+		$("button.move-up",$task).click(function(){
+			$task.insertBefore($task.prev());
+		});
+		$("button.move-down",$task).click(function(){
+			$task.insertAfter($task.next());
+		});
+		$("span.task-name",$task).click(function(){
+			onEditTaskName($(this));
+		});
+		$("input.task-name",$task).change(function(){
+			onChangeTaskName($(this));
+		});
+	}
+	function onChangeTaskName($input)
+	{
+		$input.hide();
+		var $span = $input.siblings("span.task-name_);
+		if ($input.val())
+		{
+			$span.text($input.val());
+		}
+		$span.show
+		$("input.task-name",$task).change(function(){
+			onChangeTaskName($(this));
+		})
+		.blur(function(){
+			$(this).hide().siblings("span.task-name").show();
+		});
+	}
+		
+	function onEditTaskName($span)
+	{
+		$span.hide()
+			.siblings("input.task-name")
+			.val($span.text())
+			.show()
+			.focus();
+	}
+		
 } // end MyApp
 
 /* 	JQuery's shorthand for the document ready event handler
