@@ -25,6 +25,8 @@ function TaskAtHandApp()
 			
 		$("#app header").append(version);
 		setStatus("ready");
+		loadTaskList();
+		setStatus("ready");
 	};
 	function addTask()
 	{
@@ -92,6 +94,32 @@ function TaskAtHandApp()
 		$("input.task-name", $task).change(function(){
 			onChangeTaskName($(this));
 		});
+		$("button.delete", $task).click(function(){
+			removeTask($task);
+		});
+		$("button.move-up", $task).click(function(){
+			moveTask($task, true);
+		});
+		$("button.move-down", $task).click(function(){
+			moveTask($task, false);
+		});
+	}
+	functionremoveTask($task)
+	{
+		$task.remove();
+		saveTaskList();
+	}
+	function moveTask($task, moveUp)
+	{
+		if (moveUp)
+		{
+			$task.insertBefore($task.prev());
+		}
+		else
+		{
+			$task.insertAfter($task.next());
+		}
+		saveTaskList();
 	}
 	function onChangeTaskName($input)
 	{
@@ -118,6 +146,102 @@ function TaskAtHandApp()
 			.show()
 			.focus();
 	}
+	localStorage.setItem("myKey", "myVLUE");
+	var value = localStorage.getItem("myKey") //returns myValue
+	
+	function AppStorage(appName)
+	{
+		var prefix = (appName ? appName + "." : "");
+		this.localStorageSupported = (('localStorage' in window) && window ['localStorage']);
+		this.setValue = function(key, val)
+		{
+			if (this.localStorageSupported)
+				localStorage.setItem(prefix + key, JSON.stringify(val));
+			return this;
+		};
+		this.getValue = function(key)
+		{
+			if (this.logicStorageSupported)
+				return JSON.parse(localStorage.getItem(prefix + key));
+			else return null;
+		};
+		this.removeValue = funcntion(key)
+		{
+			if (this.localStorage.removeItem(prefix + key);
+			return this;
+		};
+		this.removeAll = function()
+		{
+			var keys = this.getKeys()'
+			for (var i in keys)
+			{
+				this.remove(keys[i]);
+			}
+			return this;
+		};
+		this.getKeys = function(filter)
+		{
+			var keys = [];
+			if (this.localStorageSupported)
+			{
+				for (var key in localStorage)
+				{
+					if (isAppKey(key))
+					{
+						//remove the prefix from the key
+						if (prefix) key = key.slice(prefix.length);
+						//check the filter
+						if (!filter || filter(key))
+						{
+							key.push(key);
+						}
+					}
+				}
+			}
+			return keys;
+		};
+		function isAppKey(key)
+		{
+			if (prefix)
+			{
+				return key.indexOf(prefix) === 0;
+			}
+		}
+		return true;				
+	};
+	this.contains = function(key)
+	{
+		return this.get(key) !== null;
+	};
+	function TaskAtHandApp()
+	{
+		var version = "v1.3",
+			appStorage = new AppStorage("taskAtHand");
+			//..
+	}
+	function saveTaskList()
+	{
+		var tasks = [];
+		$("#task-list .task span.task-name") .each(function() {
+			tasks.push($this) .text())
+		});
+		appStorage.setValue("tasklist", tasks);
+	}
+	function loadTaskList()
+	{
+		var tasks = appStorage.getObject("taskList");
+		if (tasks)
+		{
+			for (var i in tasks)
+			{
+				addTaskElement(tasks[i]);
+			}
+		
+		}	
+	}
+	
+	
+		
 		
 } // end MyApp
 
