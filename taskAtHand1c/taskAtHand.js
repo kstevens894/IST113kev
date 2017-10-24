@@ -104,7 +104,7 @@ function TaskAtHandApp()
 			moveTask($task, false);
 		});
 	}
-	functionremoveTask($task)
+	function removeTask($task)
 	{
 		$task.remove();
 		saveTaskList();
