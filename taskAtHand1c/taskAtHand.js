@@ -130,7 +130,7 @@ function TaskAtHandApp()
 			$span.text($input.val());
 		}
 		$span.show();
-		$("input.task-name", $task).change(function(){
+		$("input.task-name", $task).change(function() {
 			onChangeTaskName($(this));
 		})
 		.blur(function(){
