@@ -173,7 +173,7 @@ function TaskAtHandApp()
 		};
 		this.removeAll = function()
 		{
-			var keys = this.getKeys()'
+			var keys = this.getKeys();
 			for (var i in keys)
 			{
 				this.remove(keys[i]);
