@@ -80,16 +80,16 @@ function TaskAtHandApp()
 		$("button.delete", $task).click(function(){
 			$task.remove();
 		});
-		$("button.move-up",$task).click(function(){
+		$("button.move-up", $task).click(function(){
 			$task.insertBefore($task.prev());
 		});
-		$("button.move-down",$task).click(function(){
+		$("button.move-down", $task).click(function(){
 			$task.insertAfter($task.next());
 		});
-		$("span.task-name",$task).click(function(){
+		$("span.task-name", $task).click(function(){
 			onEditTaskName($(this));
 		});
-		$("input.task-name",$task).change(function(){
+		$("input.task-name", $task).change(function(){
 			onChangeTaskName($(this));
 		});
 	}
