@@ -224,9 +224,9 @@ function TaskAtHandApp()
 	{
 		var tasks = [];
 		$("#task-list .task span.task-name") .each(function() {
-			tasks.push($this) .text())
+			tasks.push($(this) .text())
 		});
-		appStorage.setValue("tasklist", tasks);
+		appStorage.setValue("taskList", tasks);
 	}
 	function loadTaskList()
 	{
