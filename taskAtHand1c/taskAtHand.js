@@ -165,9 +165,10 @@ function TaskAtHandApp()
 				return JSON.parse(localStorage.getItem(prefix + key));
 			else return null;
 		};
-		this.removeValue = funcntion(key)
+		this.removeValue = function(key)
 		{
-			if (this.localStorage.removeItem(prefix + key);
+			if (this.localStorageSupported)
+				localStorage.removeItem(prefix + key);
 			return this;
 		};
 		this.removeAll = function()
