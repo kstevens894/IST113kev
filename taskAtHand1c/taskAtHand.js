@@ -25,8 +25,7 @@ function TaskAtHandApp()
 			
 		$("#app header").append(version);
 		setStatus("ready");
-		loadTaskList();
-		setStatus("ready");
+		
 	};
 	function addTask()
 	{
@@ -239,7 +238,9 @@ function TaskAtHandApp()
 			}
 		
 		}	
-	}
+		loadTaskList();
+		setStatus("ready");
+	};
 	
 
 	
