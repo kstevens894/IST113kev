@@ -241,43 +241,14 @@ function TaskAtHandApp()
 		loadTaskList();
 		setStatus("ready");
 	};
-	function updateButtons(history) {
-	$('#undo').attr('disabled',!history.canUndo());
-	$('#redo').attr('disabled',!history.canRedo());
-}
-
-function setEditorContents(contents) {
-	$('#editor').val(contents);
-}
-
-
-
-$(function(){
-	var history = new SimpleUndo({
-		maxLength: 200,
-		provider: function(done) {
-			done($('#editor').val());
-		},
-		onUpdate: function() {
-			//onUpdate is called in constructor, making history undefined
-			if (!history) return; 
-			
-			updateButtons(history);
-		}
+		$('.controller').click(function(){
+			console.log("undo clicked.")
+			var tasks =$(this).closest('.txtUndo').find('input');
+			$(tasks).val($(tasks).attr('data-old-value'));
+		});
+	$('.txtUndo').change(function(){
+		console.log("Save method")
 	});
-	
-	$('#undo').click(function() {
-		history.undo(setEditorContents);
-	});
-	$('#redo').click(function() {
-		history.redo(setEditorContents);
-	});
-	$('#editor').keypress(function() {
-		history.save();
-	});
-	
-	updateButtons(history);
-});
 	
 	
 	
