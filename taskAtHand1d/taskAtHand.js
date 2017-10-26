@@ -241,7 +241,6 @@ function TaskAtHandApp()
 		loadTaskList();
 		setStatus("ready");
 	};
-	function undo()
 	function updateButtons(history) {
 	$('#undo').attr('disabled',!history.canUndo());
 	$('#redo').attr('disabled',!history.canRedo());
@@ -268,7 +267,18 @@ $(function(){
 	});
 	
 	$('#undo').click(function() {
-	history.undo(setEditorContents);}
+		history.undo(setEditorContents);
+	});
+	$('#redo').click(function() {
+		history.redo(setEditorContents);
+	});
+	$('#editor').keypress(function() {
+		history.save();
+	});
+	
+	updateButtons(history);
+});
+	
 	
 	
 
