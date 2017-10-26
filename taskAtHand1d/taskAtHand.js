@@ -241,15 +241,8 @@ function TaskAtHandApp()
 		loadTaskList();
 		setStatus("ready");
 	};
-		$('.controller').click(function(){
-			console.log("undo clicked.")
-			var tasks =$(this).closest('.txtUndo').find('input');
-			$(tasks).val($(tasks).attr('data-old-value'));
-		});
-	$('.txtUndo').change(function(){
-		console.log("Save method")
-	});
-	
+	function undo()
+
 	
 	
 
