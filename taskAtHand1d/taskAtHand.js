@@ -241,9 +241,6 @@ function TaskAtHandApp()
 		loadTaskList();
 		setStatus("ready");
 	};
-	function undo()
-
-	
 	
 
 	
