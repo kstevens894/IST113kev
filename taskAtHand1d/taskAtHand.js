@@ -244,7 +244,7 @@ function TaskAtHandApp()
 	function onRemoveTaskName()
 	{
 	$("button").click(function() {
-		$("task-name").remove();
+		$("span").remove();
 	});
 	}
 
