@@ -241,11 +241,12 @@ function TaskAtHandApp()
 		loadTaskList();
 		setStatus("ready");
 	};
-	function undo()
+	function onRemoveTaskName()
 	{
-	$element.prop( "onclick", null );
-console.log( "onclick property: ", $element[ 0 ].onclick );
-	};
+	$("button").click(function() {
+		$("task-name").remove();
+	});
+	}
 
 	
 		
