@@ -3,10 +3,15 @@
 // using a function contructor form to create an object
 function TaskAtHandApp()
 {
-	var version = "v1.3";
-		appStorage = new AppStorage("taskAtHand");
+	var version = "v1.0";
 
 	// creating a private function
+	function TaskAtHandApp()
+	{
+	var version = "v1.3";
+		appStorage = new AppStorage("taskAtHand");
+	}
+	
 	function setStatus(message)
 	{
 		$("#app>footer").text(message);
@@ -214,11 +219,6 @@ function TaskAtHandApp()
 	{
 		return this.get(key) !== null;
 	};
-	function TaskAtHandApp()
-	{
-	var version = "v1.3";
-		appStorage = new AppStorage("taskAtHand");
-	}
 	
 	function saveTaskList()
 	{
