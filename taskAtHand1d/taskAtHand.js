@@ -241,8 +241,11 @@ function TaskAtHandApp()
 		loadTaskList();
 		setStatus("ready");
 	};
+	function undo()
+	{
 	$element.prop( "onclick", null );
 console.log( "onclick property: ", $element[ 0 ].onclick );
+	};
 
 	
 		
