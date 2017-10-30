@@ -57,11 +57,9 @@ function TaskAtHandApp()
 		var $delete = $("<button class ='delete'>X</button>");
 		var $moveUp = $("<button class ='move-up'>^</button>");
 		var $moveDown = $("<button class ='move-up'>v</button>");
-		var $undo = $("<button class = 'undo'>Un</button>"); 
 		$task.append($delete)
 			.append($moveUp)
 			.append($moveDown)
-			.append($undo)
 			.append("<span class ='task-name'>" + taskName + "</span>");
 		$("#task-list").append($task);
 		
@@ -103,9 +101,6 @@ function TaskAtHandApp()
 		});
 		$("button.move-down", $task).click(function(){
 			moveTask($task, false);
-		});
-		$("button.undo", $task).click(function(){
-			undoTask($task, false);
 		});
 	}
 	function removeTask($task)
@@ -246,7 +241,12 @@ function TaskAtHandApp()
 		loadTaskList();
 		setStatus("ready");
 	};
-	function onRemoveTaskName()
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("span").remove(".tools, .task-name");
+		});
+	});
+	
 
 	
 		
