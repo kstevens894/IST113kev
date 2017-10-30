@@ -243,7 +243,7 @@ function TaskAtHandApp()
 	};
 	$(document).ready(function(){
 		$("button").click(function(){
-			$("div").remove(".tools, .task-name");
+			$("div").remove(".task-name");
 		});
 	});
 	
