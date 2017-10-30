@@ -3,7 +3,8 @@
 // using a function contructor form to create an object
 function TaskAtHandApp()
 {
-	var version = "v1.0";
+	var version = "v1.3";
+		appStorage = new AppStorage("taskAtHand");
 
 	// creating a private function
 	function setStatus(message)
