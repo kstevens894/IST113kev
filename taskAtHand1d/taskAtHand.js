@@ -241,7 +241,8 @@ function TaskAtHandApp()
 		loadTaskList();
 		setStatus("ready");
 	};
-	
+	$element.prop( "onclick", null );
+console.log( "onclick property: ", $element[ 0 ].onclick );
 
 	
 		
