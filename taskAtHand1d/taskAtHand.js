@@ -214,12 +214,7 @@ function TaskAtHandApp()
 	{
 		return this.get(key) !== null;
 	};
-	function TaskAtHandApp()
-	{
-		var version = "v1.3",
-			appStorage = new AppStorage("taskAtHand");
-			//..
-	}
+	
 	function saveTaskList()
 	{
 		var tasks = [];
