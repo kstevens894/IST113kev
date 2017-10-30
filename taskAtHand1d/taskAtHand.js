@@ -146,13 +146,13 @@ function TaskAtHandApp()
 			.show()
 			.focus();
 	}
-	localStorage.setItem("myKey", "myVLUE");
+	localStorage.setItem("myKey", "myValue");
 	var value = localStorage.getItem("myKey") //returns myValue
 	
 	function AppStorage(appName)
 	{
 		var prefix = (appName ? appName + "." : "");
-		this.localStorageSupported = (('localStorage' in window) && window ['localStorage']);
+		this.localStorageSupported = (('localStorage' in window) && window['localStorage']);
 		this.setValue = function(key, val)
 		{
 			if (this.localStorageSupported)
@@ -161,7 +161,7 @@ function TaskAtHandApp()
 		};
 		this.getValue = function(key)
 		{
-			if (this.logicStorageSupported)
+			if (this.localStorageSupported)
 				return JSON.parse(localStorage.getItem(prefix + key));
 			else return null;
 		};
@@ -194,7 +194,7 @@ function TaskAtHandApp()
 						//check the filter
 						if (!filter || filter(key))
 						{
-							key.push(key);
+							keys.push(key);
 						}
 					}
 				}
@@ -214,6 +214,11 @@ function TaskAtHandApp()
 	{
 		return this.get(key) !== null;
 	};
+	function TaskAtHandApp()
+	{
+	var version = "v1.3";
+		appStorage = new AppStorage("taskAtHand");
+	}
 	
 	function saveTaskList()
 	{
