@@ -72,7 +72,7 @@ function TaskAtHandApp()
 	}
 	function addTaskElement (taskName)
 	{
-		var $task = $("#task-template .task") .clone();
+		var $task = $("#task-template .task").clone();
 		$("span.task-name", $task).text(taskName);
 		
 		$("#task-list").append($task);
@@ -89,12 +89,15 @@ function TaskAtHandApp()
 		$("span.task-name", $task).click(function(){
 			onEditTaskName($(this));
 		});
-		$("input.task-name", $task).change(function(){
-			onChangeTaskName($(this));
+		$("input.task-name", $task).change(function() {
+			onChangeTaskName($(this)); })
+			.blur(function(){
+			$(this).hide().siblings("task-name.hidden").show();
 		});
 	}
 	function onChangeTaskName($input)
 	{
+		
 		$input.hide();
 		var $span = $input.siblings("span.task-name");
 		if ($input.val())
@@ -102,12 +105,7 @@ function TaskAtHandApp()
 			$span.text($input.val());
 		}
 		$span.show();
-		$("input.task-name", $task).change(function(){
-			onChangeTaskName($(this));
-		})
-		.blur(function(){
-			$(this).hide().siblings("span.task-name").show();
-		});
+		
 	}
 		
 	function onEditTaskName($span)
@@ -116,7 +114,7 @@ function TaskAtHandApp()
 			.siblings("input.task-name")
 			.val($span.text())
 			.show()
-			.focus();
+			.focus()
 	}
 		
 } // end MyApp
