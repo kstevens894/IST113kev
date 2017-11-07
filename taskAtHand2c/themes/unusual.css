@@ -1,0 +1,18 @@
+#app {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: auto;
+	margin: 4px;
+	background-color: #bbc;
+	background: -webkit-linear-gradient(top , #b20, #00ff00);
+	background: -moz-linear-gradient(top, #bbc, #b20000);
+	background: -ms-linear-gradient(top, #bbc, #b20000);
+	background: linear-gradient(top, #bbc, #558);
+}
+#picture
+{
+	background: url(images/mtn.png);
+}
