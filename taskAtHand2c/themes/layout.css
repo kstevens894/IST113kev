@@ -1,0 +1,28 @@
+ #app
+{
+    background-color: #cbb;
+    background: -webkit-linear-gradient(top, #eff, #d8e);
+    background: -moz-linear-gradient(top, #eff, #d8e);
+    background: -ms-linear-gradient(top, #eff, #d8e);
+    background: linear-gradient(top, #eff, #d8e,);
+	
+}
+#task-list .task{
+	position: relative;
+	list-style: none;
+	padding: 0.25em;
+	margin: 0.25em;
+	background-color:pink;
+	border-radius: 4px;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+#app>header,
+#app>footer
+{
+    background-color: #d8e;
+}
