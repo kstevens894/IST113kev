@@ -11,9 +11,23 @@
 	background: -moz-linear-gradient(top, #bbc, #b20000);
 	background: -ms-linear-gradient(top, #bbc, #b20000);
 	background: linear-gradient(top, #bbc, #558);
-	border: 10px solid black;
+	border: 10px solid black;	
+	-webkit-transition: all 3s ease-in-out;
+	-moz-transition: all 3s ease-in-out;
+	-ms-transition: all 3s ease-in-out;
+	-o-transition: all 3s ease-in-out;
+	transition: all 3s ease-in-out;
+}
+#app:hover{
+	-webkit-opacity: 0.25;
+	-moz-opacityy: 0.25;
+	opacity: 0.25;
 }
 
+div#add-task
+{
+	margin: 3em;
+}
 #app>header,
 #app>footer
 {
