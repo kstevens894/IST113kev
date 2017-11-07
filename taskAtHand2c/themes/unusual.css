@@ -1,7 +1,4 @@
-body{
-	animation: colorchange 50s;
-	-webkit-animation
-}
+
 #app {
 	position: absolute;
 	top: 0;
@@ -15,17 +12,33 @@ body{
 	background: -moz-linear-gradient(top, #bbc, #b20000);
 	background: -ms-linear-gradient(top, #bbc, #b20000);
 	background: linear-gradient(top, #bbc, #558);
-	border: 10px solid black;	
+	border: 30px solid green;
+	border-image-source: linear-gradient(red, darkgreen);
+	border-image-slice: 30;
+	-webkit-animation: rainbow 10s infinite alternate;
 	-webkit-transition: all 3s ease-in-out;
 	-moz-transition: all 3s ease-in-out;
 	-ms-transition: all 3s ease-in-out;
 	-o-transition: all 3s ease-in-out;
 	transition: all 3s ease-in-out;
 }
+#task-list .task{
+	position: relative;
+	list-style: none;
+	padding: 0.25em;
+	margin: 0.25em;
+	background-color: lightgreen;
+	border-radius: 4px;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
 #app:hover{
-	-webkit-opacity: 0.25;
-	-moz-opacityy: 0.25;
-	opacity: 0.25;
+	-webkit-opacity: 1;
+	-moz-opacityy: 1;
+	opacity: 1;
 }
 
 div#add-task
