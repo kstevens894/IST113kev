@@ -11,8 +11,11 @@
 	background: -moz-linear-gradient(top, #bbc, #b20000);
 	background: -ms-linear-gradient(top, #bbc, #b20000);
 	background: linear-gradient(top, #bbc, #558);
+	border: 10px solid black;
 }
-#picture
+
+#app>header,
+#app>footer
 {
-	background: url(images/mtn.png);
+    background-color: #b20000;
 }
