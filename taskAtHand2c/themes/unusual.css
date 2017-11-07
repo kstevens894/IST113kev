@@ -43,6 +43,7 @@
 
 div#add-task
 {
+	font-weight: bold;
 	margin: 3em;
 }
 #app>header,
