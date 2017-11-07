@@ -1,3 +1,7 @@
+body{
+	animation: colorchange 50s;
+	-webkit-animation
+}
 #app {
 	position: absolute;
 	top: 0;
