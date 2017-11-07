@@ -9,8 +9,8 @@
 	margin: 4px;
 	background-color: #bbc;
 	background: -webkit-linear-gradient(top , #b20, #00ff00);
-	background: -moz-linear-gradient(top, #bbc, #b20000);
-	background: -ms-linear-gradient(top, #bbc, #b20000);
+	background: -moz-linear-gradient(top, #bbc, #00ff00);
+	background: -ms-linear-gradient(top, #bbc, #00ff00);
 	background: linear-gradient(top, #bbc, #558);
 	border: 30px solid green;
 	border-image-source: linear-gradient(red, darkgreen);
@@ -27,7 +27,7 @@
 	list-style: none;
 	padding: 0.25em;
 	margin: 0.25em;
-	background-color: lightgreen;
+	background-color: #fecdce;
 	border-radius: 4px;
 	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 	-webkit-transition: all 0.25s ease;
