@@ -4,13 +4,18 @@ function TaskAtHandApp()
 {
 	var version = "v3.2",
 		appStorage = new AppStorage("taskAtHand");
-		taskList = new TaskList();
+		taskList = new TaskList(),
+		timeOutId = 0;
 	
 
 	// creating a private function
 	function setStatus(message)
 	{
-		$("#app>footer").text(message);
+		$("#app>footer").text(msg).show();
+		if (!noFade)
+		{
+			$("#app>footer").fadeOut(1000);
+		}
 	}
 	
 	function saveTaskList()
