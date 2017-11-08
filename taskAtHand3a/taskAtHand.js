@@ -98,6 +98,14 @@ function TaskAtHandApp()
 		"span.task-name").show();
 		});	
 		$task.click(function() { onSelectTask($task); });
+		$("button.toggle-details", $task).click(function() {
+			toggleDetails($task);
+		});
+	}
+	function toggleDetails($task)
+	{
+		$(".details", $task).slideToggle();
+		$("button.toggle-details", $task).toggleClass("expanded");
 	}
 	
 	function onSelectTask($task)
