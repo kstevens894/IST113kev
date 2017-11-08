@@ -2,8 +2,9 @@
 
 function TaskAtHandApp()
 {
-	var version = "v1.3",
+	var version = "v3.2",
 		appStorage = new AppStorage("taskAtHand");
+		taskList = new TaskList();
 	
 
 	// creating a private function
@@ -65,6 +66,9 @@ function TaskAtHandApp()
 		var taskName = $("#new-task-name").val();
 		if (taskName)
 		{
+			var task = new Task(taskName);
+			taskList.addTask(task);
+			appStorage.setValue("nextTaskId", Task.nextTaskId);
 			addTaskElement(taskName);
 			// Reset the text field
 			$("#new-task-name").val("").focus();
