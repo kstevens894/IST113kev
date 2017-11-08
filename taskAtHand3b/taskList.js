@@ -46,5 +46,28 @@ function TaskList(tasks)
 		}
 		return null;
 	};
-	
+	function getTaskIndex(taskId)
+	{
+		for (var i in tasks)
+		{
+			if (tasks[i].id == taskId)
+			{
+				return parseInt(i);
+			}
+		}
+		//Not Found
+		return -1;
+	}
+	this.getTask = function(taskId)
+	{
+		var index = getTaskIndex(taskId);
+		return (index >= 0 ? tasks[index] : null);
+	};
+	this.each = function(callBack)
+	{
+		for (var i int tasks)
+		{
+			callback(tasks[i]);
+		}
+	};
 }
