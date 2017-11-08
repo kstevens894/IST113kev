@@ -20,7 +20,15 @@ function TaskAtHandApp()
 	
 	function saveTaskList()
 	{
+		if (timeOutId) clearTimeout(timeOutId);
+		setStatus("saving changes...", true);
+		timeOutId = setTimeout(function()
+		{
 		appStorage.setValue("taskList", taskList.getTasks());
+		timeOutId = 0;
+		setStatus("changes saved.");
+		},
+		2000);
 	}
 
 	// creating a public function
