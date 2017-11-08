@@ -15,11 +15,7 @@ function TaskAtHandApp()
 	
 	function saveTaskList()
 	{
-		var tasks = [];
-		$("#task-list .task span.task-name").each(function() {
-			tasks.push($(this).text())
-		});
-		appStorage.setValue("taskList", tasks);
+		appStorage.setValue("taskList", taskList.getTasks());
 	}
 
 	// creating a public function
@@ -76,9 +72,10 @@ function TaskAtHandApp()
 		}
 	}
 	
-	function addTaskElement(taskName)
+	function addTaskElement(task)
 	{
 		var $task = $("#task-template .task").clone();
+		$task.data("task-id", task.id);
 		$("span.task-name", $task).text(taskName);
 		
 		$("#task-list").append($task);
@@ -105,6 +102,25 @@ function TaskAtHandApp()
 		$("button.toggle-details", $task).click(function() {
 			toggleDetails($task);
 		});
+		$(".details input, .details select", $task).each(function() {
+			var $input = $(this);
+			var fieldName = $input.data("field");
+			$input.val(task[fieldName]);
+		});
+		$(".details input, .details select", $task).change(function() {
+			onChangeTaskDetails(task.id, $(this));
+		});
+		
+	}
+	function onChangeTaskDetails(taskId, $input)
+	{
+		var task = taskList.getTask(taskId)
+		if (task)
+		{
+			var fieldName = $input.data("field");
+			task[fieldName] = $input.val();
+			saveTaskList();
+		}
 	}
 	function toggleDetails($task)
 	{
