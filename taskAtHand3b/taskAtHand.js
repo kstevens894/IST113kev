@@ -160,13 +160,18 @@ function TaskAtHandApp()
 	function loadTaskList()
 	{
 		var tasks = appStorage.getValue("taskList");
-		if (tasks)
+		taskList = new TaskList(tasks);
+		rebuildTaskList();
+	}
+	function rebuildTaskList()
+	{
+		//Remove any old task elements
+		$("#task-list").empty();
+		//Create DOM elements for each task
+		taskList.each(function(task)
 		{
-			for (var i in tasks)
-			{
-				addTaskElement(tasks[i]);
-			}
-		}
+			addTaskElement(task);
+		});
 	}
 	
 	function onChangeTaskName($input)
