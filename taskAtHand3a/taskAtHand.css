@@ -127,6 +127,7 @@ button {
 }
 #task-list .task .details
 {
+	display: none;
 	display: block;
 	background-color: gray;
 	color: white;
