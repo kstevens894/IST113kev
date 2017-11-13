@@ -2,14 +2,14 @@
 
 function TaskAtHandApp()
 {
-	var version = "v3.2",
-		appStorage = new AppStorage("taskAtHand");
+	var version = "v3.3",
+		appStorage = new AppStorage("taskAtHand"),
 		taskList = new TaskList(),
 		timeOutId = 0;
 	
 
 	// creating a private function
-	function setStatus(message)
+	function setStatus(msg, noFade)
 	{
 		$("#app>footer").text(msg).show();
 		if (!noFade)
@@ -78,10 +78,10 @@ function TaskAtHandApp()
 			var task = new Task(taskName);
 			taskList.addTask(task);
 			appStorage.setValue("nextTaskId", Task.nextTaskId);
-			addTaskElement(taskName);
+			addTaskElement(task);
+			saveTaskList();
 			// Reset the text field
 			$("#new-task-name").val("").focus();
-			saveTaskList();
 		}
 	}
 	
@@ -89,7 +89,7 @@ function TaskAtHandApp()
 	{
 		var $task = $("#task-template .task").clone();
 		$task.data("task-id", task.id);
-		$("span.task-name", $task).text(taskName);
+		$("span.task-name", $task).text(task.name);
 		
 		$("#task-list").append($task);
 		

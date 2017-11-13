@@ -37,7 +37,7 @@ function TaskList(tasks)
 	};
 	this.removeTask = function(taskId)
 	{
-		var 0 = getTaskIndex(taskId);
+		var i = getTaskIndex(taskId);
 		if (i >= 0)
 		{
 			var task = tasks[i];
@@ -63,9 +63,9 @@ function TaskList(tasks)
 		var index = getTaskIndex(taskId);
 		return (index >= 0 ? tasks[index] : null);
 	};
-	this.each = function(callBack)
+	this.each = function(callback)
 	{
-		for (var i int tasks)
+		for (var i in tasks)
 		{
 			callback(tasks[i]);
 		}
