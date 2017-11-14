@@ -5,7 +5,7 @@
 function MyWeather()
 {
 	var weatherWidget = new WeatherWidget($("#weather-widget")),
-	version = "8.1";
+	version = "8.3";
 
 	// creating a private function
 	function setStatus()
@@ -20,6 +20,24 @@ function MyWeather()
 		$("#app>header").append(version);
 		$("#getWeather").click(setStatus);
 	};
+	function getLocation()
+	{
+		if (navigator.geoLocation)
+		{
+			navigator.geoLocation.getCurrentPosition(
+			function(position)
+			{
+				$("latitude").val(position.coords.latitude);
+				$("longitude").val(position.coords.longitude);
+			},
+			function(error)
+			{
+				$("#controls .error")
+					.text("ERROR: " + error.message)
+					.slideDown();
+			});
+		}
+	}
 } // end MyApp
 
 /* 	JQuery's shorthand for the document ready event handler

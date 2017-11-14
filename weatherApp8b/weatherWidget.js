@@ -41,7 +41,9 @@ function WeatherWidget($widget)
 			$(".results", $widget).fadeIn();
 		});
 	}
-	
+	navigator.geolocation.getCurrentPosition(
+		function(position) { alert("call was successful"); },
+		function(error) { alert("call failed"); } );
 	
 }
 
