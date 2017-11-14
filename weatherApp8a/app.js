@@ -2,13 +2,13 @@
 
 
 // using a function contructor form to create an object
-function MyApp()
+function MyWeather()
 {
-	var weatherWidget = new WeatherWidget ($("#weather-widget")),
+	var weatherWidget = new WeatherWidget($("#weather-widget")),
 	version = "8.1";
 
 	// creating a private function
-	function setStatus(message)
+	function setStatus()
 	{
 		$("#weather-widget").fadeIn();
 		weatherWidget.update();
@@ -18,8 +18,7 @@ function MyApp()
 	this.start = function()
 	{
 		$("#app>header").append(version);
-		setStatus("ready");
-		$("#WeatherWidget").click(setStatus);
+		$("#getWeather").click(setStatus);
 	};
 } // end MyApp
 
@@ -31,6 +30,6 @@ function MyApp()
 		(part of the BOM - Browser Object Model)
 */
 $(function() {
-	window.app = new MyApp();
+	window.app = new MyWeather();
 	window.app.start();
 });

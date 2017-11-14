@@ -1,7 +1,3 @@
-$("weather-widget").fadeIn();
-		weatherWidget.update();
-$("#WeatherWidget").click(setStatus);
-
 function WeatherWidget($widget)
 {
 	this.update = function()
@@ -43,6 +39,7 @@ function WeatherWidget($widget)
 			$(".results", $widget).fadeIn();
 		});
 	}
+	
 	
 }
 
