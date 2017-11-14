@@ -1,4 +1,6 @@
-
+$("weather-widget").fadeIn();
+		weatherWidget.update();
+$("#WeatherWidget").click(setStatus);
 
 function WeatherWidget($widget)
 {

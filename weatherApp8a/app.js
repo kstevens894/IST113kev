@@ -5,13 +5,13 @@
 function MyApp()
 {
 	var weatherWidget = new WeatherWidget ($("#weather-widget")),
-		version = "8.1";
+	version = "8.1";
 
 	// creating a private function
 	function setStatus(message)
 	{
 		$("#weather-widget").fadeIn();
-		weather-widget.update();
+		weatherWidget.update();
 	}
 
 	// creating a public function
@@ -19,7 +19,7 @@ function MyApp()
 	{
 		$("#app>header").append(version);
 		setStatus("ready");
-		$("#WeatherWidget").click(getWeatherReport);
+		$("#WeatherWidget").click(setStatus);
 	};
 } // end MyApp
 
