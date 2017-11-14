@@ -7,8 +7,15 @@ function WeatherWidget($widget)
 		getWeatherReport();
 	};
 	
-	function getWeatherReport() {
-		//not implemented
+	function getWeatherReport() 
+	{
+		$.get("data/weather.xml")
+			.done(function(data) {
+				populateWeather(data);
+			})
+			 .fail(function(jqXHR, textStatus, errorThrown) {
+				 showError(errorThrown);
+			 });
 	}
 	
 	
