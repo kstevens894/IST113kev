@@ -1,14 +1,17 @@
 "use strict";
 
+
 // using a function contructor form to create an object
 function MyApp()
 {
-	var version = "v1.0";
+	var weatherWidget = new WeatherWidget ($("#weather-widget")),
+		version = "8.1";
 
 	// creating a private function
 	function setStatus(message)
 	{
-		$("#app>footer").text(message);
+		$("#weather-widget").fadeIn();
+		weather-widget.update();
 	}
 
 	// creating a public function
@@ -16,6 +19,7 @@ function MyApp()
 	{
 		$("#app>header").append(version);
 		setStatus("ready");
+		$("#WeatherWidget").click(getWeatherReport);
 	};
 } // end MyApp
 

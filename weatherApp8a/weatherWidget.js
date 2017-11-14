@@ -1,3 +1,5 @@
+
+
 function WeatherWidget($widget)
 {
 	this.update = function()
@@ -39,5 +41,6 @@ function WeatherWidget($widget)
 			$(".results", $widget).fadeIn();
 		});
 	}
+	
 }
 
