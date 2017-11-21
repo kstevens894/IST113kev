@@ -9,7 +9,7 @@ function WeatherWidget($widget)
 	
 	function getWeatherReport() 
 	{
-		$.get("data/weather.json", {
+		$.get("data/weather.json",application/json {
 			t: new Date().getTime()
 		})
 			.done(function(data) {
