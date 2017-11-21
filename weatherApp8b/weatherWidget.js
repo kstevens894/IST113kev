@@ -39,7 +39,8 @@ function WeatherWidget($widget)
 		});
 	}
 	navigator.geolocation.getCurrentPosition(
-		function(position) { alert("call was successful"); },
+		function(position) { alert("call was successful"
+		var loc = position.coords.latitude + ", " + position.coords.longitude); },
 		function(error) { alert("call failed"); }
 	);
 	
