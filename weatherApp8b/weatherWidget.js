@@ -9,7 +9,6 @@ function WeatherWidget($widget)
 	
 	function getWeatherReport() 
 	{
-		var loc = position.coords.latitude + ", " + position.coords.longitude
 		$.get("data/weather.json", {
 			t: new Date().getTime()
 		})
@@ -39,6 +38,7 @@ function WeatherWidget($widget)
 			$(".results", $widget).fadeIn();
 		});
 	}
+	var loc = position.coords.latitude + ", " + position.coords.longitude
 	navigator.geolocation.getCurrentPosition(
 		function(position) { alert("call was successful"); },
 		function(error) { alert("call failed"); }
