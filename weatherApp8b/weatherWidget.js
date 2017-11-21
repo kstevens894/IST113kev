@@ -19,6 +19,10 @@ function WeatherWidget($widget)
 				 showError(errorThrown);
 			 });
 	}
+	function showError()
+	{
+		
+	}
 	
 	function populateWeather(data)
 	{
