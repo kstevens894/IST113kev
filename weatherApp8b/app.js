@@ -23,9 +23,9 @@ function MyWeather()
 	
 	function getLocation()
 	{
-		if (navigator.geoLocation)
+		if (navigator.geolocation)
 		{
-			navigator.geoLocation.getCurrentPosition(
+			navigator.geolocation.getCurrentPosition(
 			function(position)
 			{
 				$("#latitude").val(position,coords.latitude);
