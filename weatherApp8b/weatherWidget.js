@@ -30,7 +30,7 @@ function WeatherWidget($widget)
 		{
 			var $span = $(this);
 			var field = $span.data("field");
-			$(this).text(observation["field"];
+			$(this).text(observation["field"]);
 		});
 		
 		$(".loading", $widget).fadeOut(function ()
