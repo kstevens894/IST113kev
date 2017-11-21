@@ -38,11 +38,11 @@ function WeatherWidget($widget)
 			$(".results", $widget).fadeIn();
 		});
 	}
-	var loc = position.coords.latitude + ", " + position.coords.longitude
 	navigator.geolocation.getCurrentPosition(
 		function(position) { alert("call was successful"); },
 		function(error) { alert("call failed"); }
 	);
+	var loc = position.coords.latitude + ", " + position.coords.longitude
 	
 	
 }
