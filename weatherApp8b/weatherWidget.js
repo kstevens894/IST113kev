@@ -40,7 +40,7 @@ function WeatherWidget($widget)
 	}
 	navigator.geolocation.getCurrentPosition(
 		function(position) { alert("call was successful"); },
-		function(errorThrown) { alert("call failed"); }
+		function(error) { alert("call failed"); }
 	);
 	
 	
