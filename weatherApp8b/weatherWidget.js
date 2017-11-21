@@ -41,6 +41,7 @@ function WeatherWidget($widget)
 	navigator.geolocation.getCurrentPosition(
 		function(position) { alert("call was successful"); },
 		function(error) { alert("call failed"); }
+	var loc = position.coords.latitude + ", " + position.coords.longitude
 	);
 	
 	
