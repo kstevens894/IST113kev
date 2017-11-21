@@ -5,7 +5,7 @@
 function MyWeather()
 {
 	var weatherWidget = new WeatherWidget($("#weather-widget")),
-	version = "8.2";
+	version = "8.3";
 
 	// creating a private function
 	function setStatus()
