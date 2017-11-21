@@ -26,7 +26,7 @@ function WeatherWidget($widget)
 		{
 			$(".error", $widget).fadeIn();
 		});
-	
+		
 	}
 	
 	function populateWeather(data)
