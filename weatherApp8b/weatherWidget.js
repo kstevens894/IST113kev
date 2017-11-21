@@ -22,7 +22,7 @@ function WeatherWidget($widget)
 	function showError(msg)
 	{
 		$(".error>span", $widget).text(msg);
-		$(".loading, $widget).fadeOut(function ()
+		$(".loading", $widget).fadeOut(function ()
 		{
 			$(".error", $widget).fadeIn();
 		});
