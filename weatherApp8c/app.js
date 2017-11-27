@@ -4,7 +4,7 @@
 // using a function contructor form to create an object
 function MyWeather()
 {
-	var weatherWidget = new WeatherWidget($("#weather-widget")),
+	var weatherWidget = new WeatherWidget($("#weather-widget"), "YourApiKey"),
 	version = "8.3";
 
 	// creating a private function

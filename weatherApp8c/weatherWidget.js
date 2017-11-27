@@ -7,10 +7,13 @@ function WeatherWidget($widget)
 		getWeatherReport();
 	};
 	
-	function getWeatherReport() 
+	function getWeatherReport(lat, lon) 
 	{
-		$.get("data/weather.json", {
-			t: new Date().getTime()
+		var coords = lat + "," + lon;
+		$.ajax({
+			url: "http://api.wunderground.com/api/" + wuKey +
+				 "/conditions/q/" + coords + ".json",
+			dataType : "json"
 		})
 		.done(function(data) { populateWeather(data); })
 		.fail(function(jqXHR, textStatus, errorThrown) {
@@ -32,6 +35,9 @@ function WeatherWidget($widget)
 			var field = $span.data("field");
 			$(this).text(observation["field"]);
 		});
+		
+		$(".results footer img", $widget)
+			.attr("src", observation.image.url);
 		
 		$(".loading", $widget).fadeOut(function ()
 		{
