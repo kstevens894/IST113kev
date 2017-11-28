@@ -1,7 +1,7 @@
-$("#playGame").click(function() {
+$("#main").click(function() {
 	$.ajax({
 		url: "http://jservice.io/api/random"
 	}).done(function(data) {
-		$("#playGame").text(data)
+		$("#main").text(data)
 	})
 });
