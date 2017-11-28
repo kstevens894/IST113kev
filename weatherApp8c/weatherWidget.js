@@ -13,7 +13,7 @@ function WeatherWidget($widget, wuKey)
 		$.ajax({
 /* 			url: "https://api.weather.gov/points/43.22,-71.53" + wuKey +
 				 "/conditions/q/" + coords + ".json", */
-			url: "https://forecast-v3.weather.gov/point/",
+			url: "https://forecast-v3.weather.gov/point/" + coords,
 			dataType : "json"
 		})
 		.done(function(data) { populateWeather(data); })
