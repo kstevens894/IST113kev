@@ -41,10 +41,9 @@ body{
 }
 button{
 	width: 60px;
-	height: 100px;
+	height: 60px;
 }
 #button{
-	text-align:center;
 	margin: 0 auto;
 }
 header{
