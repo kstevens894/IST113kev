@@ -13,6 +13,7 @@ $(function playJeopardy(){
 		  alert('error loading quest');
 	  } */
 	});
+	var $jepq = $('#jepq');
 	$('#next').on('click', function() {
 		
 		$.ajax({
