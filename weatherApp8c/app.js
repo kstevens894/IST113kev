@@ -28,7 +28,7 @@ function MyWeather()
 			navigator.geolocation.getCurrentPosition(
 			function(position)
 			{
-				$("#latitude").val(position,coords.latitude);
+				$("#latitude").val(position.coords.latitude);
 				$("#longitude").val(position.coords.longitude);
 			},
 			function(error)
