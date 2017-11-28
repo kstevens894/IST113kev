@@ -21,7 +21,7 @@ $(function playJeopardy(){
 		$.ajax({
 			type: 'GET',
 			url: 'http://jservice.io/api/random',
-			success: function(newQuest){
+			success: function(data){
 				$jepq.replaceWith('<h1> '+ quest.question +' </h1>');
 			},
 			error: function() {
