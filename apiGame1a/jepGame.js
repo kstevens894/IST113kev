@@ -18,8 +18,8 @@ $(function playJeopardy(){
 		$.ajax({
 			url: 'http://jservice.io/api/random',
 			success: function(data){
-			$.each(data, function(i, quest) {
-				$jepq.before('<h1> '+ quest.question +' </h1>');
+			$.each(data, function(quest) {
+				$jepq.replaceWith('<h1> '+ quest.question +' </h1>');
 			});
 			},
 			error: function() {
