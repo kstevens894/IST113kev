@@ -1,3 +1,6 @@
+function playJeopardy()
+{
+	
 $("#main").click(function() {
 	$.ajax({
 		url: "http://jservice.io/api/random"
@@ -5,3 +8,5 @@ $("#main").click(function() {
 		$("#main").text(data)
 	})
 });
+
+}
