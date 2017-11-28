@@ -16,6 +16,7 @@ $(function playJeopardy(){
 	$('#next').on('click', function() {
 		
 		$.ajax({
+			type: 'DELETE',
 			url: 'http://jservice.io/api/random',
 			success: function(data){
 			$.each(data, function(i, quest) {
