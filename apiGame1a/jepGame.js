@@ -27,5 +27,6 @@ $(function playJeopardy(){
 			error: function() {
 				alert('error saving question');
 			}
+		});
 	});
 });
