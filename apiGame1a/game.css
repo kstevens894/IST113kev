@@ -17,7 +17,11 @@ html{
 body{
 }
 #button{
-	margin: 0 auto;
+	text-align: center;
+}
+#next{
+	position: absolute;
+	top: 50%;
 }
 #main{
 	
