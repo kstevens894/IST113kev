@@ -1,11 +1,11 @@
 function playJeopardy()
 {
 	
-$("#main").click(function() {
+$("#playGame").click(function() {
 	$.ajax({
 		url: "http://jservice.io/api/random"
 	}).done(function(data) {
-		$("#main").text(data)
+		$("#playGame").text(data)
 	})
 });
 
