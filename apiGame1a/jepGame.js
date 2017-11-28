@@ -2,7 +2,7 @@ $(function playJeopardy(){
 
 		var $jepq = $('#jepq');
 	
-	$.ajax({
+	/* $.ajax({
 		url: 'http://jservice.io/api/random',
 		success: function(data){
 		 $.each(data, function(i, quest) {
@@ -12,7 +12,7 @@ $(function playJeopardy(){
 	  error: function() {
 		  alert('error loading quest');
 	  }
-	});
+	}); */
 	$('#next').on('click', function() {
 		
 		$.ajax({
