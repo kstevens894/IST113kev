@@ -19,7 +19,7 @@ $(function playJeopardy(){
 		};
 		
 		$.ajax({
-			type: 'POST',
+			type: 'GET',
 			url: 'http://jservice.io/api/random',
 			data: quest,
 			success: function(newQuest){
