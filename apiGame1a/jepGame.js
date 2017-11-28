@@ -23,7 +23,7 @@ $(function playJeopardy(){
 			url: 'http://jservice.io/api/random',
 			data: quest,
 			success: function(newQuest){
-				$jepq.append('<h1> '+ newQuest.question +' </h1>');
+				$jepq.replaceWith('<h1> '+ newQuest.question +' </h1>');
 			},
 			error: function() {
 				alert('error saving question');
