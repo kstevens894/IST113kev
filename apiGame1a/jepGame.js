@@ -1,11 +1,11 @@
 $(function playJeopardy(){
 
-		var $jepq = $('#jepq');
+		var $jepq = $('#next');
 	
 	$.ajax({
 		url: 'http://jservice.io/api/random',
 		success: function(data){
-		 $.each(data, function(quest) {
+		 $.each(data, function(i, quest) {
 			 $jepq.append('<h1> '+ quest.question +' </h1>');
 		});
 	  },
