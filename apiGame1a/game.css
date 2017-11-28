@@ -39,6 +39,11 @@ body{
 	background: -ms-linear-gradient(top, #00ceff, #01cab9);
 	background: linear-gradient(top, #00ceff, #01cab9);
 }
+#button{
+	margin: auto;
+	width: 60px;
+	height: 100px;
+}
 header{
 	text-align: center;
 }
