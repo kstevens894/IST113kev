@@ -19,8 +19,11 @@ body{
 #main{
 	
 }
+p{
+	text-align: center;
+}
 ul{
-	font-size:1.5 em;
+	font-size:1 em;
 	font-weight: bold;
 	text-align: center;
 }
