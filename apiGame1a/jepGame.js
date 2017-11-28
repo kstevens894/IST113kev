@@ -27,4 +27,4 @@ $(function playJeopardy(){
 			}
 		});
 	});
-});
+s
