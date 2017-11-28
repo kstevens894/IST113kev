@@ -19,6 +19,7 @@ function MyWeather()
 	{
 		$("#app>header").append(version);
 		$("#getWeather").click(setStatus);
+		getLocation();
 	};
 	
 	function getLocation()
