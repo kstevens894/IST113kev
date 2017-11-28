@@ -16,11 +16,11 @@ $(function playJeopardy(){
 	$('#next').on('click', function() {
 		
 		$.ajax({
-			type: 'GET',
 			url: 'http://jservice.io/api/random',
-			success: function(newQuest){
-				$jepq.replaceWith('<h1> '+ newQuest.question +' </h1>');
-			},
+			success: function(data){
+		 $.each(data, function(i, quest) {
+			 $jepq.replaceWith('<h1> '+ quest.question +' </h1>');
+		},
 			error: function() {
 				alert('error saving question');
 			}
