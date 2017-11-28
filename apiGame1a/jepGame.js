@@ -19,7 +19,7 @@ $(function playJeopardy(){
 			url: 'http://jservice.io/api/random',
 			success: function(data){
 			$.each(data, function(i, quest) {
-				$jepq.toggle('<h1> '+ quest.question +' </h1>');
+				$jepq.appendToggle('<h1> '+ quest.question +' </h1>');
 			});
 			},
 			error: function() {
