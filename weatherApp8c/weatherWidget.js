@@ -11,7 +11,7 @@ function WeatherWidget($widget, wuKey)
 	{
 		var coords = lat + "," + lon;
 		$.ajax({
-			url: "http://api.wunderground.com/api/" + wuKey +
+			url: "https://api.weather.gov/points/43.22,-71.53" + wuKey +
 				 "/conditions/q/" + coords + ".json",
 			dataType : "json"
 		})
