@@ -5,7 +5,7 @@ $(function playJeopardy(){
 		url: 'http://jservice.io/api/random',
 		success: function(data){
 		 $.each(data, function(i, quest) {
-			 $jepq.append('<li> question: '+ quest.question +' </li>');
+			 $jepq.append('<li> '+ quest.question +' </li>');
 		});
 	  }
 	});

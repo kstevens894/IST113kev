@@ -19,6 +19,11 @@ body{
 #main{
 	
 }
+ul{
+	font-size:1.5 em;
+	font-weight: bold;
+	text-align: center;
+}
 
 #game {
 	padding: 0;
