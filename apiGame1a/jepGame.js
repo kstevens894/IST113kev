@@ -1,6 +1,11 @@
 $(function playJeopardy(){	
-$("#playGame").click(function() {
 	$.ajax({
-		url: '/api/random'
+		url: 'http://jservice.io/api/random'
+		success: function(data){
+		 $.each(data, function(i, quest) {
+			 
+		});
+			
+	  }
 	});
 });

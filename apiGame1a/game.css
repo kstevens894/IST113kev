@@ -19,16 +19,6 @@ body{
 #main{
 	
 }
-#playGame{
-	margin: auto;
-	padding: .5em;
-	width: 20em;
-	border-radius: 6px;
-	border: 1px solid blue;
-	background-color: WhiteSmoke;
-	color: blacks;
-	
-}
 
 #game {
 	padding: 0;
@@ -39,13 +29,7 @@ body{
 	background: -ms-linear-gradient(top, #00ceff, #01cab9);
 	background: linear-gradient(top, #00ceff, #01cab9);
 }
-button{
-	width: 30px;
-	height: 30px;
-}
-#button{
-	margin: 0 auto;
-}
+
 header{
 	text-align: center;
 }
