@@ -40,10 +40,12 @@ body{
 	background: linear-gradient(top, #00ceff, #01cab9);
 }
 button{
-	text-align:center;
-	margin: 0 auto;
 	width: 60px;
 	height: 100px;
+}
+#button{
+	text-align:center;
+	margin: 0 auto;
 }
 header{
 	text-align: center;
