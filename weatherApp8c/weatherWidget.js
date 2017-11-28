@@ -1,10 +1,10 @@
-function WeatherWidget($widget)
+function WeatherWidget($widget, wuKey)
 {
-	this.update = function()
+	this.update = function(lat, lon)
 	{
 		$(".results", $widget).hide();
 		$(".loading", $widget).show();
-		getWeatherReport();
+		getWeatherReport(lat, lon);
 	};
 	
 	function getWeatherReport(lat, lon) 
@@ -19,6 +19,10 @@ function WeatherWidget($widget)
 		.fail(function(jqXHR, textStatus, errorThrown) {
 			showError(errorThrown);
 			 });
+	}
+	function showError(errorReceived)
+	{
+			$(".error", $widget).text(errorReceived);
 	}
 	
 	function populateWeather(data)

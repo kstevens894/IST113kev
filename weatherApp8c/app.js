@@ -39,6 +39,16 @@ function MyWeather()
 			});
 		}
 	}
+	function getCurrentWeather()
+	{
+		var lat = $("#latitude").val();
+		var lon = $("#longitude").val();
+		if (lat && lon)
+		{
+			$("#weather-widget").fadeIn();
+			weatherWidget.update(lat, lon);
+		}
+	}
 } // end MyApp
 
 /* 	JQuery's shorthand for the document ready event handler
