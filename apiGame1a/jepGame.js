@@ -5,7 +5,7 @@ $(function playJeopardy(){
 		url: 'http://jservice.io/api/random',
 		success: function(data){
 		 $.each(data, function(i, quest) {
-			 $jepq.append('<h1> '+ quest.question +' </h1>');
+			 $jepq.append('<h1> Q:'+ quest.question +' </h1>');
 		});
 	  },
 	  error: function() {
@@ -14,7 +14,7 @@ $(function playJeopardy(){
 	});
 	$('#next').on('click', function() {
 		var quest = {
-			jepq: $question.val(),
+			jepq: $Q.val(),
 		};
 		
 		$.ajax({
