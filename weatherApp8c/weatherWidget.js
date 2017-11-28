@@ -31,13 +31,13 @@ function WeatherWidget($widget, wuKey)
 		
 		$(".results header img", $widget).attr("src",
 				observation.icon_url);
-		$(".location>span", $widget).text(data.location.city);
+		$(".location>span", $widget).text(observation.display_location.full);
 			
 		$(".conditions>span").each(function(i, e)
 		{
 			var $span = $(this);
 			var field = $span.data("field");
-			$(this).text(observation["field"]);
+			$(this).text(observation[field]);
 		});
 		
 		$(".results footer img", $widget)
