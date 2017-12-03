@@ -16,15 +16,67 @@ html{
 }
 body{
 }
+#userpointsbody{
+	background-color: white;
+	height: 75px;
+	width: 230px;
+	border: 2px solid black;
+	font-weight: bold;
+}
+#userpoints{
+	height: 74.5%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-color: #0191ca;
+	background-repeat:no-repeat;
+	background: -webkit-linear-gradient(top, #d9d9d9, #4d4d4d);
+	background: -moz-linear-gradient(top, #d9d9d9, #4d4d4d);
+	background: -ms-linear-gradient(top, #d9d9d9, #4d4d4d);
+	background: linear-gradient(top, #d9d9d9, #4d4d4d);
+	font-size:50px;
+	
+}
+#correctbox{
+	background: linear-gradient(top, #00ceff, #01cab9);
+	width: 100px;
+	height: 100px;
+	border: 2px solid black;
+}
+#correctnumber{
+	background-color: lightblue;
+	width: 100px;
+	height: 50px;
+	font-size:50px;
+}
+#correctheader{
+	background-color: white;
+	width: 100px;
+	height: 20px;
+	font-weight: bold;
+}
+#incorrectbox{
+	background-color: #0191ca;
+	width: 100px;
+	height: 100px;
+	border: 2px solid black;
+}
+#incorrectnumber{
+	background-color: lightblue;
+	width: 100px;
+	height: 50px;
+	font-size:50px;
+}
+#incorrectheader{
+	background-color: white;
+	width: 100px;
+	height: 20px;
+	font-weight: bold;
+}
 #button{
 	text-align: center;
 }
-#next{
-
-}
 #main{
 	text-align: center;
-	
 }
 p{
 	text-align: center;

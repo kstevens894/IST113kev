@@ -1,3 +1,6 @@
+var score = 0;
+var numberOfCorrects = 0;
+var numberOfInCorrects = 0;
 function playJeopardy(){
 	//jepq= jeopardy header1 display question there
 	//next = button to next question to appear
@@ -34,6 +37,7 @@ function checkUserAnswer(){
 	var UserAnswer = document.getElementById("answer");
 	var UpperUserAnswer = document.getElementById("answer");
 	var $apiAnswerhide = $("#answerhide");
+	var Userpoints = document.getElementById("userpoints");
 	//Using .innerText to get at the string portion of the API.answer obtained
 	UpperApiAnswer = answerhide.innerText;
 	UpperApiAnswer = UpperApiAnswer.toUpperCase();
@@ -48,12 +52,20 @@ function checkUserAnswer(){
 
 	if(UpperUserAnswer.value === UpperApiAnswer)
 	{
-		alert("Correct!!!!")
+		score = score + 5;
+		numberOfCorrects = numberOfCorrects + 1;
+		document.getElementById("correctnumber").innerHTML = numberOfCorrects;
+		document.getElementById("userpoints").innerHTML = score;
+		alert("Correct!!!! 5 points have been added to your score!!!")
 		$(UserAnswer).attr('disabled', true);
 	}
 	else
 	{
-		alert("Incorrect....")
+		score = score - 1;
+		numberOfInCorrects = numberOfInCorrects + 1;
+		document.getElementById("incorrectnumber").innerHTML = numberOfInCorrects;
+		document.getElementById("userpoints").innerHTML = score;
+		alert("Incorrect.... 1 points has been deducted from your score...")
 	}
 	
 	/* blank out the last valaue user inputted */
