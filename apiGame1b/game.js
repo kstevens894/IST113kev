@@ -1,6 +1,9 @@
 var score = 0;
 var numberOfCorrects = 0;
 var numberOfInCorrects = 0;
+var result = "";
+
+//--------------------------------------------//
 function playJeopardy(){
 	//jepq= jeopardy header1 display question there
 	//next = button to next question to appear
@@ -10,6 +13,13 @@ function playJeopardy(){
 	//Because there is no question on the screen
 	var UserAnswer = document.getElementById("answer");
 	$(UserAnswer).attr('disabled', true);
+	//Retrieve data
+	if (localStorage.getItem('userpoints') !== null)
+	{
+	    result = localStorage.getItem('userpoints');
+		score = parseInt(result);
+		document.getElementById("userpoints").innerHTML = score;
+	}
 	
 	//when button is clicked make ajax call to api/categories
 	$('#next').on('click',function(){
@@ -32,6 +42,12 @@ function playJeopardy(){
 		});
 	});	
 }; /* end of playJeopardy */
+function resetPoints()
+{
+	score = 0;
+	document.getElementById("userpoints").innerHTML = score;
+	localStorage.setItem("userpoints", score);		
+};
 
 function checkUserAnswer(){
 	var UserAnswer = document.getElementById("answer");
@@ -54,8 +70,8 @@ function checkUserAnswer(){
 	{
 		score = score + 5;
 		numberOfCorrects = numberOfCorrects + 1;
-		document.getElementById("correctnumber").innerHTML = numberOfCorrects;
 		document.getElementById("userpoints").innerHTML = score;
+		document.getElementById("correctnumber").innerHTML = numberOfCorrects;
 		alert("Correct!!!! 5 points have been added to your score!!!")
 		$(UserAnswer).attr('disabled', true);
 	}
@@ -63,11 +79,12 @@ function checkUserAnswer(){
 	{
 		score = score - 1;
 		numberOfInCorrects = numberOfInCorrects + 1;
-		document.getElementById("incorrectnumber").innerHTML = numberOfInCorrects;
 		document.getElementById("userpoints").innerHTML = score;
+		document.getElementById("incorrectnumber").innerHTML = numberOfInCorrects;
 		alert("Incorrect.... 1 points has been deducted from your score...")
 	}
-	
+	//write score out to file
+	localStorage.setItem("userpoints", score);
 	/* blank out the last valaue user inputted */
 	UserAnswer.value = "";
 };

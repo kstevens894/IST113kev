@@ -36,7 +36,7 @@ body{
 	font-size:50px;
 	
 }
-#correctbox{
+#correctbody{
 	background: linear-gradient(top, #00ceff, #01cab9);
 	width: 100px;
 	height: 100px;
@@ -54,7 +54,7 @@ body{
 	height: 20px;
 	font-weight: bold;
 }
-#incorrectbox{
+#incorrectbody{
 	background-color: #0191ca;
 	width: 100px;
 	height: 100px;
@@ -74,6 +74,9 @@ body{
 }
 #button{
 	text-align: center;
+}
+#resetscore{
+	text-align: left;
 }
 #main{
 	text-align: center;
